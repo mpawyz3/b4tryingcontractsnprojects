@@ -33,12 +33,14 @@ import ContractorOnboarding from './pages/ContractorOnboarding';
 import CompanyProfile from './pages/CompanyProfile';
 import Tenders from './pages/Tenders';
 import Contracts from './pages/Contracts';
+import ContractsEnhanced from './pages/ContractsEnhanced';
 import ComplianceVault from './pages/ComplianceVault';
 import MilestoneVerification from './pages/MilestoneVerification';
 import ProfessionalDirectory from './pages/ProfessionalDirectory';
 import Supplies from './pages/Supplies';
 import SystemStatus from './pages/SystemStatus';
 import ProjectsManagement from './pages/ProjectsManagement';
+import ProjectsEnhanced from './pages/ProjectsEnhanced';
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { user, loading } = useAuth();
@@ -260,7 +262,7 @@ function App() {
           path="/contracts"
           element={
             <ContractorProtectedRoute>
-              <Contracts />
+              <ContractsEnhanced />
             </ContractorProtectedRoute>
           }
         />
@@ -308,7 +310,7 @@ function App() {
           path="/projects"
           element={
             <ContractorProtectedRoute>
-              <ProjectsManagement />
+              <ProjectsEnhanced />
             </ContractorProtectedRoute>
           }
         />
